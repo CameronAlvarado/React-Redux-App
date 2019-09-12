@@ -5,7 +5,7 @@ import {
   } from "../actions";
   
   const initialState = {
-    quote: null,
+    data: null,
     isFetching: false,
     error: ""
   };
@@ -22,7 +22,7 @@ import {
         return {
           ...state,
           isFetching: false,
-          quote: action.payload
+          data: action.payload
         };
       default:
         return state;

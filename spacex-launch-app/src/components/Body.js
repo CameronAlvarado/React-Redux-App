@@ -8,7 +8,7 @@ import { getData } from "../actions";
 
 import "../App.css";
 
-function Body(props) {
+function Body({ getData, data, isFetching, error }) {
     // const [nasaData, setNasaData] = useState([]);
     // const [date, setDate] = useState("Loading...");
 
@@ -27,24 +27,36 @@ function Body(props) {
     //         console.log(response.data)
     //       })
     //   }, [date]);
-    const getData = () => {
-      props.getData();
+    // const [newData, setNewData] = useState({ links: { flickr_images: [] }}); 
+
+    // useEffect(() => {
+    //   // run action creator when the component mounts
+    //   getData();
+    // }, [getData]);
+  
+    if (isFetching) {
+      return <h3>Fetching data for ya!</h3>;
     }
+
+    const getDataButton = () => {
+      getData()
+    }
+
+    console.log(data);
 
     return (
         <div className = "Body">
           {/* <ButtonEx onClick={() => setDate(today)}/> */}
-          <ButtonEx onClick={() => getData()}/>
-           {/* <button className="button" onClick={() => setDate(today)}>Click to show Photo</button> */}
-          {/* <PhotoBox imgUrl={nasaData.hdurl}/>
-          <TextBox title={nasaData.title} date={date} explanation=        {nasaData.explanation} /> */}
+          <ButtonEx onClick={getDataButton}/>
+          <PhotoBox imgArr={data}/> {/* <--- major blocker */}
+          {/* <TextBox title={nasaData.title} date={date} explanation=        {nasaData.explanation} /> */}
         </div>
     )
 }
 
 const mapStateToProps = state => {
   return {
-    quote: state.quote,
+    data: state.data,
     isFetching: state.isFetching,
     error: state.error
   };
