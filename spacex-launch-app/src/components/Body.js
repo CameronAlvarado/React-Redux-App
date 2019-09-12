@@ -34,9 +34,9 @@ function Body({ getData, data, isFetching, error }) {
     //   getData();
     // }, [getData]);
   
-    if (isFetching) {
-      return <h3>Fetching data for ya!</h3>;
-    }
+    // if (isFetching) {
+    //   return <h3>Fetching data for ya!</h3>;
+    // }
 
     const getDataButton = () => {
       getData()
@@ -48,7 +48,7 @@ function Body({ getData, data, isFetching, error }) {
         <div className = "Body">
           {/* <ButtonEx onClick={() => setDate(today)}/> */}
           <ButtonEx onClick={getDataButton}/>
-          <PhotoBox imgArr={data}/> {/* <--- major blocker */}
+          <PhotoBox data={data}/> {/* <--- major blocker */}
           {/* <TextBox title={nasaData.title} date={date} explanation=        {nasaData.explanation} /> */}
         </div>
     )

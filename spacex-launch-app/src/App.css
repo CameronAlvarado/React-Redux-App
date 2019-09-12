@@ -1,3 +1,12 @@
+body {
+  background-color: rgb(34, 34, 34);
+}
+
+h3 {
+  color: lightgray;
+  letter-spacing: 3px;
+}
+
 .App {
   text-align: center;
 }
@@ -29,5 +38,37 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+.photo-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 30px;
+}
+
+img {
+  width: 400px;
+  height: 100%;
+  animation: change-background 3s ease infinite;
+  transition: transform .2s;
+}
+
+img:hover {
+  transform: scale(1.5); 
+  /* align-self: baseline; */
+  /* flex-basis: max-content;  */
+}
+
+@keyframes change-background {
+  0% {
+    border: 1px solid black;
+  }
+  50% {
+    border: 1px solid orange;
+  }
+  100% {
+    border: 1px solid black;
   }
 }

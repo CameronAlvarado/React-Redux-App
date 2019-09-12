@@ -1,13 +1,14 @@
 import React from "react"
 import "../App.css";
+import { Image } from 'semantic-ui-react'
 
 function PhotoBox(props) {
-    if (!props.imgArr) return <h3>3... 2... 1...</h3>
+    if (!props.data) return <h3>3... 2... 1...</h3>
     return (
-        <div className = "PhotoBox">
+        <div className = "photo-box">
             {console.log(props)}
-            {props.imgArr.links.flickr_images.map( url => {
-                return <img class="ui fluid image" src={url} alt="APOD"></img>
+            {props.data.links.flickr_images.map( url => {
+                return <img src={url} alt="SpaceXPhoto" key={Math.random()} ></img>
             })}
             
         </div>
