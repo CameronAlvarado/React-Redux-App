@@ -13,7 +13,7 @@ function ButtonEx(props)  {
         inverted color='orange' 
         animated='horizontal'>
         <Button.Content hidden>
-          <Icon loading name='space shuttle' />
+          <Icon name='space shuttle' />
         </Button.Content>
         <Button.Content visible>
           Click to Launch!

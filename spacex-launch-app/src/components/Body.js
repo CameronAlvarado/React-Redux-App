@@ -48,8 +48,8 @@ function Body({ getData, data, isFetching, error }) {
         <div className = "Body">
           {/* <ButtonEx onClick={() => setDate(today)}/> */}
           <ButtonEx onClick={getDataButton}/>
-          <PhotoBox data={data}/> {/* <--- major blocker */}
-          {/* <TextBox title={nasaData.title} date={date} explanation=        {nasaData.explanation} /> */}
+          <TextBox data={data} />
+          <PhotoBox data={data} />
         </div>
     )
 }

@@ -3,20 +3,24 @@ import { Segment } from 'semantic-ui-react'
 
 import "../App.css";
 
-function TextBox(props) {
+function TextBox({ data }) {
+    if (!data) return <h2>3... 2... 1...</h2>
     return (
-        <div className = "TextBox">
-            <Segment.Group basic>
-                <Segment inverted color='#1b1c1d' basic>
-                    <h3>{props.title}</h3>
-                </Segment>
-                <Segment inverted color='#1b1c1d' basic>
-                    <h4>{props.date}</h4>
-                </Segment>
-                <Segment inverted color='#1b1c1d'>
-                    <p>{props.explanation}</p>
-                </Segment>
-            </Segment.Group>
+        <div>
+            <img src={data.links.mission_patch_small}></img>
+            <div className = "TextBox">
+                <Segment.Group basic>
+                    <Segment basic>
+                        <h2>{data.mission_name}</h2>
+                    </Segment>
+                    <Segment basic>
+                        <h4>{data.launch_date_local}</h4>
+                    </Segment>
+                    <Segment basic>
+                        <p>{data.details}</p>
+                    </Segment>
+                </Segment.Group>
+            </div>
         </div>
     )
 }
