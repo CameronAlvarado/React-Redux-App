@@ -49,6 +49,7 @@ function Body({ getData, data, isFetching, error }) {
           {/* <ButtonEx onClick={() => setDate(today)}/> */}
           <ButtonEx onClick={getDataButton}/>
           <TextBox data={data} />
+          <br></br>
           <PhotoBox data={data} />
         </div>
     )

@@ -11,7 +11,10 @@ function TextBox({ data }) {
             <div className = "TextBox">
                 <Segment.Group basic>
                     <Segment basic>
-                        <h2>{data.mission_name}</h2>
+                        <h2>Mission: {data.mission_name}</h2>
+                    </Segment>
+                    <Segment basic>
+                        <h3>Rocket: {data.rocket.rocket_name}</h3>
                     </Segment>
                     <Segment basic>
                         <h4>{data.launch_date_local}</h4>

@@ -11,7 +11,8 @@ function ButtonEx(props)  {
       <Button 
         onClick={props.onClick} 
         inverted color='orange' 
-        animated='horizontal'>
+        animated='horizontal'
+        class='button'>
         <Button.Content hidden>
           <Icon name='space shuttle' />
         </Button.Content>
