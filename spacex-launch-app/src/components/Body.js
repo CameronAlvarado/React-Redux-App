@@ -9,45 +9,18 @@ import { getData } from "../actions";
 import "../App.css";
 
 function Body({ getData, data, isFetching, error }) {
-    // const [nasaData, setNasaData] = useState([]);
-    // const [date, setDate] = useState("Loading...");
 
-    var today = new Date();
-    var dd = String(today.getDate()).padStart(2, '0');
-    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-    var yyyy = today.getFullYear();
+    // var today = new Date();
+    // var dd = String(today.getDate()).padStart(2, '0');
+    // var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    // var yyyy = today.getFullYear();
 
-    today = yyyy + '-' + mm + '-' + dd;
-
-    // useEffect(() => {
-    //     axios
-    //     .get(`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=${date}`) // Public API
-    //       .then(response => {
-    //         setNasaData(response.data)
-    //         console.log(response.data)
-    //       })
-    //   }, [date]);
-    // const [newData, setNewData] = useState({ links: { flickr_images: [] }}); 
-
-    // useEffect(() => {
-    //   // run action creator when the component mounts
-    //   getData();
-    // }, [getData]);
-  
-    // if (isFetching) {
-    //   return <h3>Fetching data for ya!</h3>;
-    // }
-
-    const getDataButton = () => {
-      getData()
-    }
-
-    console.log(data);
+    // today = yyyy + '-' + mm + '-' + dd;
 
     return (
         <div className = "Body">
           {/* <ButtonEx onClick={() => setDate(today)}/> */}
-          <ButtonEx onClick={getDataButton}/>
+          <ButtonEx onClick={getData}/>
           <TextBox data={data} />
           <br></br>
           <PhotoBox data={data} />

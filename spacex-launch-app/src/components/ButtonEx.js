@@ -6,13 +6,12 @@ import { Button, Segment, Icon } from 'semantic-ui-react'
 function ButtonEx(props)  {
 
      return (
-  <div>
+  <div className={'button-box'}>
     <Segment inverted basic>
       <Button 
         onClick={props.onClick} 
         inverted color='orange' 
-        animated='horizontal'
-        class='button'>
+        animated='horizontal' >
         <Button.Content hidden>
           <Icon name='space shuttle' />
         </Button.Content>

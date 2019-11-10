@@ -7,7 +7,9 @@ function TextBox({ data }) {
     if (!data) return <h2>3... 2... 1...</h2>
     return (
         <div>
-            <img src={data.links.mission_patch_small}></img>
+            {data.links.mission_patch_small != null ? 
+            <img src={data.links.mission_patch_small} alt="Space X mission badge" /> : null}
+            
             <div className = "TextBox">
                 <Segment.Group basic>
                     <Segment basic>

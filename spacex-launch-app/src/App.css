@@ -20,6 +20,16 @@ h2 {
   background: #202020;
 }
 
+.button-box {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 15px;
+}
+
+.ui.inverted.segment {
+  width: fit-content;
+}
+
 .ui.inverted.orange.button, .ui.inverted.orange.buttons .button {
   width: 200px;
 }
@@ -92,4 +102,13 @@ h2 {
   100% {
     border: 2px solid rgb(33, 34, 35);
   }
+}
+
+.TextBox {
+  display: flex;
+  justify-content: center;
+}
+
+.ui.segments {
+  width: 50%;
 }
