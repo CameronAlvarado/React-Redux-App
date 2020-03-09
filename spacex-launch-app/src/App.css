@@ -2,7 +2,10 @@ body {
   background-color: #272727;
 }
 
-h2, h3, h4, p {
+h2,
+h3,
+h4,
+p {
   color: white;
 }
 
@@ -28,9 +31,11 @@ h2 {
 
 .ui.inverted.segment {
   width: fit-content;
+  border-radius: 10px;
 }
 
-.ui.inverted.orange.button, .ui.inverted.orange.buttons .button {
+.ui.inverted.orange.button,
+.ui.inverted.orange.buttons .button {
   width: 200px;
 }
 
@@ -79,7 +84,7 @@ h2 {
   width: 400px;
   height: 100%;
   /* animation: change-background 3s ease infinite; */
-  transition: transform .2s;
+  transition: transform 0.2s;
 }
 
 .button {
@@ -87,7 +92,7 @@ h2 {
 }
 
 .Image:hover {
-  transform: scale(1.5); 
+  transform: scale(1.5);
   /* align-self: baseline; */
   /* flex-basis: max-content;  */
 }

@@ -10,9 +10,11 @@ export const getData = () => dispatch => {
     .get(`https://api.spacexdata.com/v3/launches/${Math.floor((Math.random() * 92) + 1)}`)
     .then(res => {
       console.log(res);
-      dispatch({ type: FETCHING_DATA_SUCCESS, payload: res.data });
+      dispatch({ type: FETCHING_DATA_SUCCESS,
+                 payload: res.data });
     })
     .catch(err => {
-      dispatch({ type: FETCHING_DATA_FAILURE, payload: err.data.slip });
+      dispatch({ type: FETCHING_DATA_FAILURE,
+                 payload: console.log(err) });
     });
 };
