@@ -11,6 +11,7 @@ import "../App.css";
 function Body({ getData, data, isFetching, error }) {
   return (
     <div className="Body">
+      {/* <ButtonEx onClick={() => setDate(today)}/> */}
       <ButtonEx getData={getData} />
       <TextBox data={data} />
       <br></br>
