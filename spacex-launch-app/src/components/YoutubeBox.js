@@ -11,7 +11,6 @@ function YoutubeBox({ data }) {
   console.log(data);
   return (
     <>
-      {/* <ButtonEx onClick={getData} /> */}
       {data !== null ? (
         <div className="video">
           <iframe
@@ -31,11 +30,11 @@ function YoutubeBox({ data }) {
   );
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
     data: state.data,
     isFetching: state.isFetching,
-    error: state.error
+    error: state.error,
   };
 };
 
