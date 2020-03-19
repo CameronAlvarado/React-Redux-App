@@ -11,7 +11,6 @@ import "../App.css";
 function Body({ getData, data, isFetching, error }) {
   return (
     <div className="Body">
-      {/* <ButtonEx onClick={() => setDate(today)}/> */}
       <ButtonEx getData={getData} />
       <TextBox data={data} />
       <br></br>
@@ -20,11 +19,11 @@ function Body({ getData, data, isFetching, error }) {
   );
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
     data: state.data,
     isFetching: state.isFetching,
-    error: state.error
+    error: state.error,
   };
 };
 
