@@ -10,7 +10,7 @@ function YoutubeBox({ getData, data }) {
   //   if (!data) return <span>wait</span>;
   return (
     <>
-      <ButtonEx onClick={getData} />
+      {/* <ButtonEx onClick={getData} /> */}
       {data ? (
         <iframe
           title="youtube"

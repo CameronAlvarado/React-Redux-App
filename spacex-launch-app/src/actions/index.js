@@ -9,7 +9,7 @@ export const getData = () => dispatch => {
   axios
     .get(
       `https://api.spacexdata.com/v3/launches/${Math.floor(
-        Math.random() * 92 + 1
+        Math.random() * 107 + 1
       )}`
     )
     .then(res => {
