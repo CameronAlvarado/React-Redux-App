@@ -1,6 +1,6 @@
-import React from "react"
+import React from "react";
 import PhotoBox from "./PhotoBox";
-import TextBox from "./TextBox"
+import TextBox from "./TextBox";
 import ButtonEx from "./ButtonEx";
 
 import { connect } from "react-redux";
@@ -9,16 +9,15 @@ import { getData } from "../actions";
 import "../App.css";
 
 function Body({ getData, data, isFetching, error }) {
-
-    return (
-        <div className = "Body">
-          {/* <ButtonEx onClick={() => setDate(today)}/> */}
-          <ButtonEx onClick={getData}/>
-          <TextBox data={data} />
-          <br></br>
-          <PhotoBox data={data} />
-        </div>
-    )
+  return (
+    <div className="Body">
+      {/* <ButtonEx onClick={() => setDate(today)}/> */}
+      <ButtonEx onClick={getData} />
+      <TextBox data={data} />
+      <br></br>
+      <PhotoBox data={data} />
+    </div>
+  );
 }
 
 const mapStateToProps = state => {
@@ -29,7 +28,4 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(
-  mapStateToProps,
-  { getData }
-)(Body);
+export default connect(mapStateToProps, { getData })(Body);
