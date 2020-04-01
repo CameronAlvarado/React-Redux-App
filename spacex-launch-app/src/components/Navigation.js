@@ -1,22 +1,29 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Button } from "semantic-ui-react";
 
 import ButtonEx from "./ButtonEx.js";
 
 const Navigation = () => {
   return (
     <div className="nav">
-      <Link to="/">
-        <div className="nav-links">
-          <h3>Main Info</h3>
-        </div>
-      </Link>
-
-      <Link to="/youtube">
-        <div className="nav-links">
-          <h3>Youtube Media</h3>
-        </div>
-      </Link>
+      <Button.Group>
+        <Button color="grey">
+          <Link to="/">
+            {/* <div className="nav-links"> */}
+            Hide Youtube
+            {/* </div> */}
+          </Link>
+        </Button>
+        <Button.Or />
+        <Button color="orange">
+          <Link to="/youtube" id="youtube">
+            {/* <div className="nav-links"> */}
+            Show YouTube
+            {/* </div> */}
+          </Link>
+        </Button>
+      </Button.Group>
     </div>
   );
 };

@@ -8,7 +8,7 @@ function ButtonEx(props) {
     <div className={"button-box"}>
       <Segment inverted basic>
         <Button
-          onClick={props.onClick}
+          onClick={props.getData}
           inverted
           color="orange"
           animated="horizontal"

@@ -15,10 +15,22 @@ p {
   margin: auto;
 }
 
+a {
+  color: black;
+}
+
 a:hover {
+  color: black;
+  /* text-decoration: underline; */
+  /* text-decoration-color: rgb(255, 136, 0); */
+}
+
+#youtube {
   color: white;
-  text-decoration: underline;
-  text-decoration-color: rgb(255, 136, 0);
+}
+
+.video {
+  padding: 10px;
 }
 
 p {
@@ -56,17 +68,11 @@ h3 {
 
 .ui.inverted.orange.button,
 .ui.inverted.orange.buttons .button {
-  width: 200px;
+  width: 235px;
 }
 
 .App {
   text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
 }
 
 .App-header {
@@ -80,24 +86,13 @@ h3 {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 .photo-box {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  margin: 30px;
+  /* justify-content: space-evenly; */
+  width: 1200px;
+  margin: auto;
+  /* margin: 30px; */
 }
 
 .Image {
@@ -107,9 +102,9 @@ h3 {
   transition: transform 0.2s;
 }
 
-.button {
-  animation: change-background 3s ease infinite;
-}
+/* .button {
+  animation: change-background 11s ease infinite;
+} */
 
 .Image:hover {
   transform: scale(1.5);
@@ -123,6 +118,7 @@ h3 {
   }
   50% {
     border: 2px solid rgb(214, 113, 41);
+    /* border: 2px solid orange; */
   }
   100% {
     border: 2px solid rgb(33, 34, 35);

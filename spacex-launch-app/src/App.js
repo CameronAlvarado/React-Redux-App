@@ -13,8 +13,8 @@ function App() {
       <Header />
       <Navigation />
       {/* <Body /> */}
-      <Route component={Body} exact path="/" />
       <Route component={YoutubeBox} path="/youtube" />
+      <Route component={Body} path="/" />
     </div>
   );
 }

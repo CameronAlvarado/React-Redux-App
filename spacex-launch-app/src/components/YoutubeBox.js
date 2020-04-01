@@ -7,20 +7,21 @@ import { getData } from "../actions";
 import ButtonEx from "./ButtonEx.js";
 
 function YoutubeBox({ getData, data }) {
-  //   if (!data) return <span>wait</span>;
   return (
     <>
       {/* <ButtonEx onClick={getData} /> */}
       {data ? (
-        <iframe
-          title="youtube"
-          width="560"
-          height="315"
-          src={`https://www.youtube.com/embed/${data.links.youtube_id}`}
-          frameBorder="0"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        ></iframe>
+        <div className="video">
+          <iframe
+            title="youtube"
+            width="560"
+            height="315"
+            src={`https://www.youtube.com/embed/${data.links.youtube_id}`}
+            frameBorder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </div>
       ) : (
         <h2>Click button for new mission</h2>
       )}

@@ -12,7 +12,7 @@ function Body({ getData, data, isFetching, error }) {
   return (
     <div className="Body">
       {/* <ButtonEx onClick={() => setDate(today)}/> */}
-      <ButtonEx onClick={getData} />
+      <ButtonEx getData={getData} />
       <TextBox data={data} />
       <br></br>
       <PhotoBox data={data} />
