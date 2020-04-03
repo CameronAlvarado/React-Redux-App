@@ -147,6 +147,12 @@ h3 {
   }
 }
 
+/* @media screen and (min-width: 1000px) {
+  iframe {
+    width: 00%;
+  }
+} */
+
 @media screen and (max-width: 500px) {
   .photo-box {
     flex-direction: column;
