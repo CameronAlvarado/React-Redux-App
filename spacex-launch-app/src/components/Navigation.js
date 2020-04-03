@@ -11,7 +11,7 @@ const Navigation = () => {
         <Button color="grey">
           <Link to="/">
             {/* <div className="nav-links"> */}
-            Hide Youtube
+            Hide Video
             {/* </div> */}
           </Link>
         </Button>
@@ -19,7 +19,7 @@ const Navigation = () => {
         <Button color="orange">
           <Link to="/youtube" id="youtube">
             {/* <div className="nav-links"> */}
-            Show YouTube
+            Show Video
             {/* </div> */}
           </Link>
         </Button>

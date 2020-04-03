@@ -9,12 +9,6 @@ p {
   color: white;
 }
 
-.badge {
-  width: 200px;
-  height: 200px;
-  margin: auto;
-}
-
 a {
   color: black;
 }
@@ -23,14 +17,6 @@ a:hover {
   color: black;
   /* text-decoration: underline; */
   /* text-decoration-color: rgb(255, 136, 0); */
-}
-
-#youtube {
-  color: white;
-}
-
-.video {
-  padding: 10px;
 }
 
 p {
@@ -47,8 +33,28 @@ h3 {
   padding-bottom: 10px;
 }
 
+#youtube {
+  color: white;
+}
+
 ::-webkit-scrollbar {
   display: none;
+}
+
+.badge {
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  padding: 15px;
+}
+
+.video {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  /* border: 1px solid black; */
+  /* border-radius: 10px; */
+  width: fit-content;
+  margin: auto;
 }
 
 .ui.segments {
@@ -58,7 +64,7 @@ h3 {
 .button-box {
   display: flex;
   justify-content: center;
-  padding-bottom: 15px;
+  /* padding-bottom: 15px; */
 }
 
 .ui.inverted.segment {
@@ -68,7 +74,7 @@ h3 {
 
 .ui.inverted.orange.button,
 .ui.inverted.orange.buttons .button {
-  width: 235px;
+  width: 230px;
 }
 
 .App {
@@ -89,15 +95,14 @@ h3 {
 .photo-box {
   display: flex;
   flex-wrap: wrap;
-  /* justify-content: space-evenly; */
-  width: 1200px;
-  margin: auto;
-  /* margin: 30px; */
+  justify-content: space-between;
 }
 
 .Image {
   width: 400px;
   height: 100%;
+  margin: auto;
+
   /* animation: change-background 3s ease infinite; */
   transition: transform 0.2s;
 }
@@ -130,6 +135,27 @@ h3 {
   margin: auto;
 }
 
+.ui.buttons {
+  width: 19rem;
+}
+
+/* ----- media queries ---- */
+
+@media screen and (max-width: 1000px) {
+  .ui.segments {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .photo-box {
+    flex-direction: column;
+  }
+  .ui.segments {
+    /* width: 90%; */
+  }
+}
+
 .nav {
-  padding-bottom: 5px;
+  padding-bottom: 7px;
 }

@@ -4,18 +4,20 @@ import "../App.css";
 import { connect } from "react-redux";
 import { getData } from "../actions";
 
-import ButtonEx from "./ButtonEx.js";
-
-function YoutubeBox({ getData, data }) {
+function YoutubeBox({ data }) {
+  //   if (!data) {
+  //     return <h3>WAIT</h3>;
+  //   } else {
+  console.log(data);
   return (
     <>
       {/* <ButtonEx onClick={getData} /> */}
-      {data ? (
+      {data !== null ? (
         <div className="video">
           <iframe
             title="youtube"
-            width="560"
-            height="315"
+            width="500"
+            height="300"
             src={`https://www.youtube.com/embed/${data.links.youtube_id}`}
             frameBorder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -23,7 +25,7 @@ function YoutubeBox({ getData, data }) {
           ></iframe>
         </div>
       ) : (
-        <h2>Click button for new mission</h2>
+        <h3>No video available</h3>
       )}
     </>
   );
