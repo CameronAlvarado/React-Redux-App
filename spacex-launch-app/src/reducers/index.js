@@ -13,7 +13,7 @@ import {
   export const reducer = (state = initialState, action) => {
     switch (action.type) {
       case FETCHING_DATA_START:
-        return {
+        return { // updates store.
           ...state,
           isFetching: true,
           error: ""
@@ -24,6 +24,11 @@ import {
           isFetching: false,
           data: action.payload
         };
+      case FETCHING_DATA_FAILURE:
+        return {
+          isFetching: false,
+          error: "Did not fetch data"
+        }
       default:
         return state;
     }

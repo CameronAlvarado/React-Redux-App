@@ -1,16 +1,20 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { Route, Switch } from "react-router-dom";
+
 import "./App.css";
-import Header from "./components/Header"
-import Body from "./components/Body"
-import Footer from "./components/Footer"
+import Header from "./components/Header";
+import Body from "./components/Body";
+import Navigation from "./components/Navigation";
+import YoutubeBox from "./components/YoutubeBox";
 
 function App() {
   return (
     <div className="App">
-        <Header />
-        <Body />
-        <Footer />
+      <Header />
+      <Navigation />
+      {/* <Body /> */}
+      <Route component={YoutubeBox} path="/youtube" />
+      <Route component={Body} path="/" />
     </div>
   );
 }

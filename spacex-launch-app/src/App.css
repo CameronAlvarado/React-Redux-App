@@ -2,8 +2,21 @@ body {
   background-color: #272727;
 }
 
-h2, h3, h4, p {
+h2,
+h3,
+h4,
+p {
   color: white;
+}
+
+a {
+  color: black;
+}
+
+a:hover {
+  color: black;
+  /* text-decoration: underline; */
+  /* text-decoration-color: rgb(255, 136, 0); */
 }
 
 p {
@@ -16,22 +29,56 @@ h2 {
   letter-spacing: 3px;
 }
 
+h3 {
+  padding-bottom: 10px;
+}
+
+#youtube {
+  color: white;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.badge {
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  padding: 15px;
+}
+
+.video {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  /* border: 1px solid black; */
+  /* border-radius: 10px; */
+  width: fit-content;
+  margin: auto;
+}
+
 .ui.segments {
   background: #202020;
 }
 
-.ui.inverted.orange.button, .ui.inverted.orange.buttons .button {
-  width: 200px;
+.button-box {
+  display: flex;
+  justify-content: center;
+  /* padding-bottom: 15px; */
+}
+
+.ui.inverted.segment {
+  width: fit-content;
+  border-radius: 10px;
+}
+
+.ui.inverted.orange.button,
+.ui.inverted.orange.buttons .button {
+  width: 230px;
 }
 
 .App {
   text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
 }
 
 .App-header {
@@ -45,39 +92,27 @@ h2 {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 .photo-box {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  margin: 30px;
+  justify-content: space-between;
 }
 
 .Image {
   width: 400px;
   height: 100%;
+  margin: auto;
+
   /* animation: change-background 3s ease infinite; */
-  transition: transform .2s;
+  transition: transform 0.2s;
 }
 
-.button {
-  animation: change-background 3s ease infinite;
-}
+/* .button {
+  animation: change-background 11s ease infinite;
+} */
 
 .Image:hover {
-  transform: scale(1.5); 
+  transform: scale(1.5);
   /* align-self: baseline; */
   /* flex-basis: max-content;  */
 }
@@ -88,8 +123,45 @@ h2 {
   }
   50% {
     border: 2px solid rgb(214, 113, 41);
+    /* border: 2px solid orange; */
   }
   100% {
     border: 2px solid rgb(33, 34, 35);
   }
+}
+
+.ui.segments {
+  width: 50%;
+  margin: auto;
+}
+
+.ui.buttons {
+  width: 19rem;
+}
+
+/* ----- media queries ---- */
+
+@media screen and (max-width: 1000px) {
+  .ui.segments {
+    width: 90%;
+  }
+}
+
+/* @media screen and (min-width: 1000px) {
+  iframe {
+    width: 00%;
+  }
+} */
+
+@media screen and (max-width: 500px) {
+  .photo-box {
+    flex-direction: column;
+  }
+  .ui.segments {
+    /* width: 90%; */
+  }
+}
+
+.nav {
+  padding-bottom: 7px;
 }
