@@ -5,9 +5,11 @@ import { connect } from "react-redux";
 import { getData } from "../actions";
 
 function YoutubeBox({ data }) {
-  //   if (!data) {
-  //     return <h3>WAIT</h3>;
-  //   } else {
+  var w =
+    window.innerWidth ||
+    document.documentElement.clientWidth ||
+    document.body.clientWidth;
+
   console.log(data);
   return (
     <>
@@ -16,8 +18,8 @@ function YoutubeBox({ data }) {
         <div className="video">
           <iframe
             title="youtube"
-            width="400"
-            height="225"
+            width={w < 500 ? "400" : "560"}
+            height={w < 500 ? "225" : "315"}
             src={`https://www.youtube.com/embed/${data.links.youtube_id}`}
             frameBorder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -31,11 +33,11 @@ function YoutubeBox({ data }) {
   );
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
     data: state.data,
     isFetching: state.isFetching,
-    error: state.error
+    error: state.error,
   };
 };
 
