@@ -18,8 +18,8 @@ function YoutubeBox({ data }) {
         <div className="video">
           <iframe
             title="youtube"
-            width={w < 500 ? "400" : "560"}
-            height={w < 500 ? "225" : "315"}
+            width={w < 500 ? "375" : "560"}
+            height={w < 500 ? "210.9375" : "315"}
             src={`https://www.youtube.com/embed/${data.links.youtube_id}`}
             frameBorder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
