@@ -1,8 +1,0 @@
-{
-    "version": 2,
-    "name": "spacex-app",
-    "builds": [{ "src": "spacex-app/spacex-launch-app/package.json", "use": "@now/static-build", "config": {"distDir": "build"} }],
-    "routes": [
-        { "src": "/(.*)", "dest": "spacex-app/$1" }
-    ]
-}
