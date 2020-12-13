@@ -10,7 +10,7 @@ function YoutubeBox({ data }) {
     document.documentElement.clientWidth ||
     document.body.clientWidth;
 
-  console.log(data);
+  // console.log(data);
   return (
     <>
       {/* <ButtonEx onClick={getData} /> */}
@@ -20,7 +20,7 @@ function YoutubeBox({ data }) {
             title="youtube"
             width={w < 500 ? "375" : "560"}
             height={w < 500 ? "210.9375" : "315"}
-            src={`https://www.youtube.com/embed/${data.links.youtube_id}`}
+            src={`https://www.youtube.com/embed/${data ? data.links.youtube_id: null}`}
             frameBorder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen

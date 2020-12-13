@@ -95,13 +95,13 @@ h3 {
 .photo-box {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .Image {
   width: 400px;
   height: 100%;
-  margin: auto;
+  /* margin: auto; */
 
   /* animation: change-background 3s ease infinite; */
   transition: transform 0.2s;
@@ -113,8 +113,8 @@ h3 {
 
 .Image:hover {
   transform: scale(1.5);
-  /* align-self: baseline; */
-  /* flex-basis: max-content;  */
+  align-self: baseline;
+  flex-basis: max-content;
 }
 
 @keyframes change-background {
